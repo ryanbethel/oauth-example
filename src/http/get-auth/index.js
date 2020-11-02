@@ -14,13 +14,11 @@ async function auth(req) {
                 if (!account.google.email) {
                     throw new Error();
                 }
-                account.name = account.google.name;
             } else if (state.provider === "github") {
                 account.github = await githubAuth(req);
                 if (!account.github.login) {
                     throw new Error();
                 }
-                account.name = account.github.name;
             } else {
                 throw new Error();
             }
@@ -32,7 +30,7 @@ async function auth(req) {
         }
         return {
             session: { account },
-            status: 200,
+            status: 302,
             location: state.finalRedirect,
         };
     } else {

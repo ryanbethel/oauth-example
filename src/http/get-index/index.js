@@ -1,7 +1,7 @@
 const arc = require("@architect/functions");
 
 async function page(req) {
-    let name = Guest;
+    let name = "Guest";
     if (req.session && req.session.account.google) {
         name = req.session.account.google.name;
     } else if (req.session && req.session.account.github) {

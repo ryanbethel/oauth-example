@@ -1,0 +1,12 @@
+{
+    "name": "post-logout",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@architect/functions": "^3.13.3"
+    }
+}

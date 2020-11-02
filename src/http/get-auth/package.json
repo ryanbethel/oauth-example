@@ -1,0 +1,14 @@
+{
+    "name": "get-auth",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@architect/functions": "^3.13.3",
+        "jsonwebtoken": "^8.5.1",
+        "tiny-json-http": "^7.2.2"
+    }
+}

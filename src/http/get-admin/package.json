@@ -1,0 +1,12 @@
+{
+    "name": "get-admin",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "@architect/functions": "^3.13.3"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

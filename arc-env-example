@@ -1,0 +1,14 @@
+// For Begin.com these values are entered in the .arc-env file for local development under the @testing section. For staging and development use the environment variable page on Begin.com
+// For Architect project these env variables are inserted using `arc env` command.
+
+@testing
+APP_SECRET secret
+GOOGLE_CLIENT_ID xxxxxxxxxxxx
+GOOGLE_CLIENT_SECRET xxxxxxxxxxxxx
+GITHUB_CLIENT_SECRET xxxxxxxxxx
+GITHUB_CLIENT_ID xxxxxxxxx
+AUTH_REDIRECT https://someplace.com/path
+
+@staging
+
+@production

@@ -1,0 +1,11 @@
+{
+    "name": "any-catchall",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@architect/functions": "^3.13.3"
+    }
+}

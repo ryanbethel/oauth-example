@@ -1,0 +1,14 @@
+{
+    "name": "oauth-example",
+    "version": "0.0.0",
+    "description": "oauth example",
+    "scripts": {
+        "start": "npx sandbox"
+    },
+    "devDependencies": {
+        "@architect/functions": "^3.13.3",
+        "@architect/sandbox": "^3.0.5"
+    },
+    "dependencies": {
+    }
+}

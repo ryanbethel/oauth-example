@@ -2,15 +2,15 @@ const arc = require("@architect/functions");
 
 async function page(req) {
     let name = "Guest";
-    if (req.session && req.session.account.google) {
+    if (req.session.account && req.session.account.google) {
         name = req.session.account.google.name;
-    } else if (req.session && req.session.account.github) {
+    } else if (req.session.account && req.session.account.github) {
         name = req.session.account.github.name;
     }
 
     return {
         status: 200,
-        body: `<!doctype html>
+        html: `<!doctype html>
             <html lang="en">
                 <head>
                     <meta charset="utf-8">

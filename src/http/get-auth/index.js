@@ -14,11 +14,13 @@ async function auth(req) {
                 if (!account.google.email) {
                     throw new Error();
                 }
+                account.name = account.google.name;
             } else if (state.provider === "github") {
                 account.github = await githubAuth(req);
                 if (!account.github.login) {
                     throw new Error();
                 }
+                account.name = account.github.name;
             } else {
                 throw new Error();
             }
@@ -28,7 +30,6 @@ async function auth(req) {
                 body: "not authorized",
             };
         }
-
         return {
             session: { account },
             status: 200,

@@ -11,7 +11,7 @@ async function login(req) {
     const githubUrl = githubOAuthUrl({ finalRedirect });
     return {
         status: 200,
-        body: `<!doctype html>
+        html: `<!doctype html>
             <html lang="en">
                 <head>
                     <meta charset="utf-8">

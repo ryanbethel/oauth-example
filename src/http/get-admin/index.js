@@ -4,7 +4,7 @@ async function admin(req) {
     if (req.session.account) {
         return {
             status: 200,
-            body: `<!doctype html>
+            html: `<!doctype html>
                         <html lang="en">
                             <head>
                             <meta charset="utf-8">

@@ -21,7 +21,6 @@ module.exports = async function githubAuth(req) {
             },
         });
         return {
-            token,
             name: user.body.name,
             login: user.body.login,
             id: user.body.id,

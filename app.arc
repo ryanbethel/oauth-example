@@ -7,4 +7,3 @@ get /auth
 post /logout
 get /admin
 get /login
-

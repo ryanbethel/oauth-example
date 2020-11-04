@@ -4,7 +4,7 @@ const googleOAuthUrl = require("./googleOAuthUrl");
 
 async function login(req) {
     let finalRedirect = "/";
-    if (req.query.finalRedirect === "admin") {
+    if (req.query.next === "admin") {
         finalRedirect = "/admin";
     }
     const googleUrl = await googleOAuthUrl({ finalRedirect });
@@ -18,15 +18,14 @@ async function login(req) {
                     <meta name="viewport" content="width=device-width, initial-scale=1">
                     <title>login page</title>
                 </head>
-                <html>
-                    <body>
-                        <h1>Login</h1>
-                        </br>
-                        <a href="${githubUrl}">Login with Github</a>
-                        </br>
-                        <a href="${googleUrl}">Login with Google</a>
-                    </body>
-                </html>`,
+                <body>
+                    <h1>Login</h1>
+                    </br>
+                    <a href="${githubUrl}">Login with Github</a>
+                    </br>
+                    <a href="${googleUrl}">Login with Google</a>
+                </body>
+            </html>`,
     };
 }
 

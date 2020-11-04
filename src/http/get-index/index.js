@@ -1,11 +1,11 @@
 const arc = require("@architect/functions");
 
 async function page(req) {
-    let name = "Guest";
+    let greeting = "Guest";
     if (req.session.account && req.session.account.google) {
-        name = req.session.account.google.email + " (logged in with Google)";
+        greeting = req.session.account.google.email + " (logged in with Google)";
     } else if (req.session.account && req.session.account.github) {
-        name = req.session.account.github.login + " (logged in with Github)";
+        greeting = req.session.account.github.login + " (logged in with Github)";
     }
 
     return {
@@ -18,17 +18,16 @@ async function page(req) {
                     <title>login page</title>
                     <meta name="description" content="a page with some links">
                 </head>
-                <html>
-                    <body>
+                <body>
                     <h1>Welcome</h1>
-                    <p>${name}</p>
+                    <p>${greeting}</p>
                     ${
                         req.session.account
                             ? '<form method="post" action="/logout"> <button type="submit">Logout</button></form>'
                             : '<a href="/login">Login</a>'
                     }
-                    </body>
-                </html>`,
+                </body>
+            </html>`,
     };
 }
 

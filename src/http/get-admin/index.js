@@ -17,18 +17,17 @@ async function admin(req) {
                             <meta name="viewport" content="width=device-width, initial-scale=1">
                             <title>login page</title>
                         </head>
-                        <html>
-                            <body>
-                                <h1>Admin Page</h1>
-                                <p>username: ${info}</p>
-                                <form method="post" action="/logout"><button type="submit">Logout</button></form>
-                            </body>
-                        </html>`,
+                        <body>
+                            <h1>Admin Page</h1>
+                            <p>username: ${info}</p>
+                            <form method="post" action="/logout"><button type="submit">Logout</button></form>
+                        </body>
+                    </html>`,
         };
     } else {
         return {
             status: 302,
-            location: "/login?finalRedirect=admin",
+            location: "/login?next=admin",
         };
     }
 }
